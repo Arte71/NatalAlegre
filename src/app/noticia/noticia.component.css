@@ -1,0 +1,32 @@
+#destaque {
+    border: 4px outset rgb(19, 19, 179);
+    width: 90%;
+    font-size: 14px;
+    padding-left: 40px;
+    padding-right: 40px;
+    column-gap: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+
+.prenoticias{
+    line-height: 1.1;
+    padding: 10px;
+    padding-left: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    justify-content: center;
+
+}
+
+.noticias {
+    border: 4px outset green;
+    width: 20%;
+    margin-top: 40px;
+    padding: 40px;
+    font-size: 13px;
+    box-shadow: 10px 10px;
+}
