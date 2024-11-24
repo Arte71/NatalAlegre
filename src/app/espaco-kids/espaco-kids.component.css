@@ -1,4 +1,3 @@
-
 h1{
     text-align:left;
     font-size: 2rem; /* Aumenta o tamanho da fonte */
@@ -15,8 +14,7 @@ h1{
     width: 70%; /* Largura do container */
     padding: 5px;
     gap: 20px;
-    border-radius: 25px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); 
+    
     position: relative;
     top: 40px; /* Ajuste a posição do container */
     left: 0; /* Alinha o container à esquerda */
@@ -30,7 +28,7 @@ h1{
     flex: 1; /* A descrição vai ocupar o espaço restante */
     padding: 0 20px;
     text-align: justify; /* Justifica o texto */
-    
+
 }
 
 .Descricao{
@@ -57,8 +55,11 @@ h1{
 }
 
 .botao:hover {
+
     background-color: #034a12; /* Cor de fundo quando passar o mouse */
     box-shadow: 0 0 10px 3px rgb(254, 2, 2);
+    
+    
 }
 
 /* Responsividade para telas pequenas (smartphones) */
@@ -71,6 +72,7 @@ h1{
     .imagem {
         max-width: 100%; /* A imagem ocupa 100% da largura disponível */
         margin-bottom: 15px;
+        
     }
 
     .Descricao {
