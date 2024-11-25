@@ -9,8 +9,14 @@ import { RouterLink, RouterOutlet } from '@angular/router';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+  statusClass = 'fechado';
 
+  abrir(){
+    this.statusClass = 'aberto'
+  }
 
-  
+  fechar(){
+  this.statusClass = 'fechado';
 
+ }
 }

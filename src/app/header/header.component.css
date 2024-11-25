@@ -28,3 +28,18 @@
 .link:hover{
     color:rgba(17, 128, 17);
 }
+
+.aberto{
+    display: block;
+    position: fixed;
+    overflow: auto;
+    z-index: 1;
+    width: 200px;
+    height: 300px;
+    padding-top: 20px;
+    padding-right: 80%;
+}
+
+.fechado{
+    display: none;
+}
