@@ -19,4 +19,21 @@ export class HeaderComponent {
   this.statusClass = 'fechado';
 
  }
+ cadastrarUsers: any[] = [];
+ cadastrarObj:any = {
+  user: '', 
+  senha: ''
+ };
+ acessarObj any = {
+  user: '',
+  senha: ''
+ };
+
+ onCadastrar(){
+  
+ }
+
+ onLogin(){
+
+ }
 }
