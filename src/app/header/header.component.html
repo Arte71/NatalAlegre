@@ -1,9 +1,19 @@
 <div id="login" [NgClass]="modal">
-    <form class="animate" action="" method="post">
+    <form class="content-animate" action="" method="post">
         <span (click)="fechar" class="close"></span>
-    </form>
+    
 
-    <div></div>
+    <div>
+        <div class="container">
+            <label for="user"><b>Usuário</b></label>
+            <input type="text" placeholder="Insira o nome de usuário" name="user" required [(ngModel)]="acessarObj.user">
+            <label for="senha"><b>Senha</b></label>
+            <input type="password" placeholder="Insira a senha" name="senha" required [(ngModel)]="acessarObj.senha">
+            <button type="sumbit">Acessar o Sistema</button>
+        </div>
+        <span class="senha">Esqueceu <a href="#">a senha?</a></span>
+    </div>
+  </form>
 </div>
 
 <div id="container">
