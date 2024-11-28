@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
@@ -20,20 +20,38 @@ export class HeaderComponent {
 
  }
  cadastrarUsers: any[] = [];
- cadastrarObj:any = {
+ cadastrarObj: any = {
   user: '', 
   senha: ''
  };
- acessarObj any = {
+ acessarObj: any = {
   user: '',
   senha: ''
  };
+ 
+ ngOnInIt(): void {
+  const localData = localStorage.getItem('cadastrarUsers');
+  if (localData != null) {
+    this.cadastrarUsers = JSON.parse(localData);
+  }
+ }
 
  onCadastrar(){
-  
+  this.cadastrarUsers.push(this.cadastrarObj);
+  localStorage.setItem('cadastrarUsers',JSON.stringify(this.cadastrarUsers));
+  this.cadastrarObj = {
+  user: '', 
+  senha: ''
+ };
  }
 
  onLogin(){
+  const userExiste =  this.cadastrarUsers.find(m => m.user == this.acessarObj.user && m.senha == this.acessarObj.senha);
+  if (userExiste != undefined) {
+    alert('Usuário logado com sucesso')
+  } else {
+    alert('Acesso inválido. Tente novamente ou cadastre-se agora!')
+  }
 
  }
 }
