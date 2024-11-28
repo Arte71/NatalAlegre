@@ -1,4 +1,4 @@
-<div id="login" [NgClass]="modal">
+<div id="login" ng-class="modal">
     <form class="content-animate" action="" method="post">
         <span (click)="fechar" class="close"></span>
     
@@ -6,15 +6,35 @@
     <div>
         <div class="container">
             <label for="user"><b>Usuário</b></label>
-            <input type="text" placeholder="Insira o nome de usuário" name="user" required [(ngModel)]="acessarObj.user">
+            <input type="text" placeholder="Insira o nome de usuário" name="user" required ng-model='acessarObj.user'>
             <label for="senha"><b>Senha</b></label>
-            <input type="password" placeholder="Insira a senha" name="senha" required [(ngModel)]="acessarObj.senha">
-            <button type="sumbit">Acessar o Sistema</button>
+            <input type="password" placeholder="Insira a senha" name="senha" required ng-model='acessarObj.senha'>
+            <button type="sumbit" (click)="onLogin()">Acessar o Sistema</button>
         </div>
-        <span class="senha">Esqueceu <a href="#">a senha?</a></span>
+        <span class="senha">Esqueceu a <a href="#"> senha?</a></span>
     </div>
   </form>
 </div>
+
+<div id="cadastro" ng-class="modal">
+    <form class="content-animate" action="" method="post">
+        <span (click)="fechar" class="close"></span>
+    
+
+    <div>
+        <div class="container">
+            <label for="user"><b>Usuário</b></label>
+            <input type="text" placeholder="Insira o nome de usuário" name="user" required ng-model='cadastrarObj.user'>
+            <label for="senha"><b>Senha</b></label>
+            <input type="password" placeholder="Insira a senha" name="senha" required ng-model='cadastrarObj.senha'>
+            <button type="sumbit" (click)="onCadastrar()">Cadastrar-se</button>
+        </div>
+        <span class="senha">Esqueceu a <a href="#">senha?</a></span>
+    </div>
+  </form>
+</div>
+
+
 
 <div id="container">
     <div id="logo" style="font-size: 20px;">NatalAlegre</div>
@@ -26,6 +46,6 @@
         <div class="link">Contato</div>
         <div>|</div>
         <div class="link" (click)="abrir">Login</div>
-        <div class="link">Registrar</div>
+        <div class="link">Cadastrar</div>
     </div>
 </div>
