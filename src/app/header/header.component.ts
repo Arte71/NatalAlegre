@@ -1,6 +1,13 @@
+<<<<<<< Updated upstream
 import { CommonModule } from '@angular/common'; 
 //OninIt necessário para que possa salvar as conta cadastradas
 import { Component, OnInit, } from '@angular/core'; 
+=======
+//Necessário para utilizar o NgIf
+import { CommonModule } from '@angular/common'; 
+//OninIt necessário para que possa salvar as conta cadastradas
+import { Component, OnInit } from '@angular/core'; 
+>>>>>>> Stashed changes
 import { RouterLink, RouterOutlet } from '@angular/router';
 //Necessário para verificar se você está conectado com a sua conta ou não
 import { AuthService } from '../auth.service'; 
@@ -54,7 +61,11 @@ export class HeaderComponent implements OnInit{
   senha: ''
  };
 
+<<<<<<< Updated upstream
  //Armazenar as informações fornecidas por cadastrarUsers
+=======
+ //Armazenar as informações fornecidas por cadastrarUsers, elas são salvas de forma permanente
+>>>>>>> Stashed changes
  ngOnInit(): void { 
   const localData = localStorage.getItem('cadastrarUsers');
   if (localData != null) {
@@ -70,6 +81,7 @@ export class HeaderComponent implements OnInit{
   user: '', 
   senha: ''
  };
+ alert('Usuário cadastrado com sucesso!')
  }
 
  onLogin(){

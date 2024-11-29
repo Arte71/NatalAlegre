@@ -1,3 +1,4 @@
+/* O formato do header em si */
 #container {
     display: flex;
     padding: 20px 30px ;
@@ -7,10 +8,12 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
+/* NatalAlegre */
 #logo {
     font-size: 20px;
 }
 
+/* Formato dos itens de navegação */
 #links {
     flex-grow: 1;
     display: flex;
@@ -19,6 +22,7 @@
     font-weight: 700;
 }
 
+/* Itens do header */
 .link{
     font-size: 20px;
     cursor: pointer;
@@ -27,12 +31,14 @@
 
 }
 
+/* Quando o mouse fica em cima, o texto fica de branco para verde*/
 .link:hover{
     color:#034a12;
     
 
 }
 
+/* Formatação dos campos para preencher o login e a senha */
 input[type=text], input[type=password] {
     width: 90%;
     height: 10px;
@@ -43,6 +49,7 @@ input[type=text], input[type=password] {
     box-sizing: border-box;
   }
   
+ /* Quando se clica no login, ele "abre" */ 
 .abertoLogin{
     display: block;
     border: 4px outset rgba(34,111,85);
@@ -60,6 +67,7 @@ input[type=text], input[type=password] {
     
 }
 
+ /* Quando se clica no cadastro, ele "abre" */ 
 .abertoCadastro{
     display: block;
     border: 4px outset rgb(163, 121, 36);
@@ -77,15 +85,17 @@ input[type=text], input[type=password] {
     
 }
 
+ /* Classe que determina que o login ou o cadastro estão fechados*/ 
 .fechado{
     display: none;
 }
 
+ /* Posição do "Esqueceu a senha?" */ 
 .senha{
     margin-left: 55%;
 }
 
-  
+ /* Animações que fazem com que o login ou o cadastro "cresçam do nada" */   
 @-webkit-keyframes animatezoom {
     from {-webkit-transform: scale(0)} 
     to {-webkit-transform: scale(1)}
@@ -96,10 +106,12 @@ input[type=text], input[type=password] {
     to {transform: scale(1)}
 }
 
+ /* Usuário, Senha e botão de enviar com as suas novas posições */ 
 .inf{
     margin: 5px;
 }
 
+ /* Botão de fechar e seus atributos */ 
 .close {
     float: right;
     margin-right: 10px;
@@ -107,6 +119,7 @@ input[type=text], input[type=password] {
     font-size: 20px;
 }
 
+ /* Passando o mouse por cima, o botão de fechar fica vermelho */ 
 .close:hover{
     cursor: pointer;
     color: red;

@@ -6,14 +6,14 @@
         <!-- Formulário para enviar a carta -->
         <div class="form-container">
             <h3>Envie sua cartinha agora!</h3>
-            <form action="enviar_cartinha.php" method="POST">
+            <form action="" method="POST">
                 <label for="email">Seu E-mail:</label>
-                <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
+                <input type="email" id="email" name="email" required placeholder="Digite seu e-mail" [(ngModel)]="cartinhaObj.email">
 
                 <label for="mensagem">Sua Cartinha para o Papai Noel:</label>
-                <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Escreva seu pedido para o Papai Noel..."></textarea>
+                <textarea id="mensagem" name="mensagem" rows="5" required placeholder="Escreva seu pedido para o Papai Noel..." [(ngModel)]="cartinhaObj.mens"></textarea>
 
-                <button type="submit">Enviar Cartinha!</button>
+                <button type="submit" (click)="enviarCartinha()">Enviar Cartinha!</button>
             </form>
         </div>
     </div>

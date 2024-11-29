@@ -80,8 +80,6 @@ form input, form textarea {
 
 /* Estilo para o botão de envio do formulário */
 form button {
-    background-color: red; /* Cor de fundo vermelho */
-    color: white; /* Cor do texto no botão */
     font-size: 1.2rem; /* Tamanho da fonte */
     padding: 10px 20px; /* Espaçamento interno do botão */
     border: none; /* Remove a borda padrão */
@@ -94,3 +92,16 @@ form button:hover {
     background-color: green; /* Muda a cor de fundo para um verde */
 }
 
+input[type=number] {
+    width: 20%;
+    height: 10px;
+    margin: 8px 12px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  } 
+
+  #contato{
+    background-color: red; /* Cor de fundo vermelho */
+    color: white; /* Cor do texto no botão */
+  }
