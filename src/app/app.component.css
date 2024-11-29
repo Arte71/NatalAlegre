@@ -1,3 +1,7 @@
+
+body {
+    background-color: (243,240,187)
+
 /* Responsividade para telas pequenas (smartphones) */
 @media (max-width: 768px) {
     .container {

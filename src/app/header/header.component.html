@@ -1,12 +1,54 @@
+<div id="login" [ngClass]="statusClassLogin">
+    <form class="content-animate" action="" method="post">
+        <span (click)="fecharLogin()" class="close">X</span>
+    
+
+    <div>
+        <div class="container">
+            <label for="user" class="inf"><b>Usuário</b></label>
+            <input type="text" placeholder="Insira o nome de usuário" name="user" required [(ngModel)]='acessarObj.user'>
+            <label for="senha" class="inf"><b>Senha</b></label>
+            <input type="password" placeholder="Insira a senha" name="senha" required [(ngModel)]='acessarObj.senha'>
+            <button type="sumbit" (click)="onLogin()" class="inf">Acessar o Sistema</button>
+        </div>
+        <span class="senha">Esqueceu a <a href="#"> senha?</a></span>
+    </div>
+  </form>
+</div>
+
+<div id="cadastro" [ngClass]="statusClassCadastro">
+    <form class="content-animate" action="" method="post">
+        <span (click)="fecharCadastro()" class="close">X</span>
+    
+
+    <div>
+        <div class="container">
+            <label for="user" class="inf"><b>Usuário</b></label>
+            <input type="text" placeholder="Insira o nome de usuário" name="user" required [(ngModel)]='cadastrarObj.user'>
+            <label for="senha" class="inf"><b>Senha</b></label>
+            <input type="password" placeholder="Insira a senha" name="senha" required [(ngModel)]='cadastrarObj.senha'>
+            <button type="sumbit" (click)="onCadastrar()" class="inf">Cadastrar-se</button>
+        </div>
+    </div>
+  </form>
+</div>
+
+
+
 <div id="container">
     <div id="logo" style="font-size: 20px;">NatalAlegre</div>
     <div id="links">
         <div><a routerLink="/" class="link">Notícias</a></div>
         <div><a routerLink="/doacao" class="link">Doações</a></div>
-        <div class="link">Lugar Kids</div>
-        <div class="link">Sobre</div>
-        <div class="link">Contato</div>
-        <div class="link">Login</div>
-        <div class="link">Registrar</div>
+        <div routerLink="/espaco-kids" class="link">Lugar Kids</div>
+        <div routerLink="/sobre" class="link">Sobre</div>
+        <div routerLink="/contato" class="link">Contato</div>
+        <div>|</div>
+        <div *ngIf="!authService.session" class="link" (click)="abrirLogin()">Login</div>
+        <div *ngIf="!authService.session" class="link" (click)="abrirCadastro()">Cadastrar</div>
+        <div *ngIf="authService.session" class="link">Bem vindo {{ authService.session.user }}</div>
+        <div *ngIf="authService.session">|</div>
+        <div *ngIf="authService.session" class="link" (click)="authService.session = undefined">Sair do sistema</div>
+
     </div>
 </div>
