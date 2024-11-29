@@ -1,3 +1,7 @@
+<<<<<<< Updated upstream
+=======
+<!-- O container onde fica o Login e suas funcionalidades -->
+>>>>>>> Stashed changes
 <div id="login" [ngClass]="statusClassLogin">
     <form class="content-animate" action="" method="post">
         <span (click)="fecharLogin()" class="close">X</span>
@@ -16,6 +20,10 @@
   </form>
 </div>
 
+<<<<<<< Updated upstream
+=======
+<!-- O container onde fica o Cadastro e suas funcionalidades -->
+>>>>>>> Stashed changes
 <div id="cadastro" [ngClass]="statusClassCadastro">
     <form class="content-animate" action="" method="post">
         <span (click)="fecharCadastro()" class="close">X</span>
@@ -34,21 +42,30 @@
 </div>
 
 
-
+<!-- O header em si, com sua logo e seus links! -->
 <div id="container">
     <div id="logo" style="font-size: 20px;">NatalAlegre</div>
     <div id="links">
         <div><a routerLink="/" class="link">Notícias</a></div>
         <div><a routerLink="/doacao" class="link">Doações</a></div>
+<<<<<<< Updated upstream
         <div routerLink="/espaco-kids" class="link">Lugar Kids</div>
         <div routerLink="/sobre" class="link">Sobre</div>
         <div routerLink="/contato" class="link">Contato</div>
+=======
+        <div class="link" routerLink="/espaco-kids">Lugar Kids</div>
+        <div class="link" routerLink="/sobre">Sobre</div>
+        <div class="link" routerLink="/contato">Contato</div>
+>>>>>>> Stashed changes
         <div>|</div>
         <div *ngIf="!authService.session" class="link" (click)="abrirLogin()">Login</div>
         <div *ngIf="!authService.session" class="link" (click)="abrirCadastro()">Cadastrar</div>
         <div *ngIf="authService.session" class="link">Bem vindo {{ authService.session.user }}</div>
         <div *ngIf="authService.session">|</div>
         <div *ngIf="authService.session" class="link" (click)="authService.session = undefined">Sair do sistema</div>
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
     </div>
 </div>

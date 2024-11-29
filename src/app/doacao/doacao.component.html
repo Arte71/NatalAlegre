@@ -13,17 +13,38 @@
                 <li><strong>Doação em Dinheiro:</strong> Deposite em nossa conta bancária, as informações estão abaixo.</li>
                 <li><strong>Doação de Brinquedos:</strong> Aceitamos brinquedos novos ou usados, desde que em bom estado.</li>
                 <li><strong>Doação de Roupas:</strong> Roupas novas ou em bom estado para as crianças de 0 a 12 anos.</li>
+                <li><strong>Doação de Material Escolar:</strong> Cadernos, livros e quaisquer materiais que sejam necessário para a educação infantil.</li>
             </ul>
         </div>
 
         <!-- Onde Doar -->
         <div class="onde-doar">
+<<<<<<< Updated upstream
             <h3>Onde Doar</h3>
+=======
+            <h3>Para Doações de forma presencial</h3>
+>>>>>>> Stashed changes
             <p>Você pode fazer a doação em nosso ponto de coleta ou pela nossa conta bancária:</p>
             <ul>
                 <li><strong>Ponto de Coleta:</strong> Rua Solidariedade, 123 - Centro</li>
                 <li><strong>Conta Bancária:</strong> Banco X, Agência 1234, Conta Corrente 56789-0</li>
             </ul>
+            <h3>Para Doações online</h3>
+            <p>Você pode ajudar a nossa campanha de forma online, ajudando uma criança sem sair de casa:</p>
+            <p><b>Selecione para qual causa:</b></p>
+            <select>
+                <option value="brinquedo">Brinquedo</option>
+                <option value="roupas">Roupas</option>
+                <option value="escola">Material Escolar</option>
+            </select>
+            <br><br>
+            <label for="number">Valor da Doação: <b>R$</b> </label>
+            <form action="">
+            <input type="number" id="real" name="real" min="1" [(ngModel)]="valor" required>
+            <button type="submit">Doar</button>
+            <br><br>
+            <p>Valor total da doação: R$ {{valor}}</p>
+            </form>
         </div>
 
         <!-- Formulário de Contato -->
@@ -31,17 +52,18 @@
             
             <h3>Dúvidas entre em Contato</h3>
             <p>Se tiver alguma dúvida ou quiser mais informações, entre em contato conosco preenchendo o formulário abaixo:</p>
-            <form action="processar_doacao.php" method="POST">
+            <form action="" method="POST">
                 <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
+                <input type="text" id="nome" name="nome" [(ngModel)]="contatoObj.nome" required>
 
                 <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" [(ngModel)]="contatoObj.email" required>
 
                 <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+                <textarea id="mensagem" name="mensagem" rows="4" [(ngModel)]="contatoObj.mens" required></textarea>
 
-                <button type="submit">Enviar</button>
+                <button id="contato" type="submit" (click)="salvarContato()">Enviar</button>
+                <p></p>
             </form>
         </div>
     </div>
