@@ -1,3 +1,33 @@
+
 body {
     background-color: (243,240,187)
+
+/* Responsividade para telas pequenas (smartphones) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Empilha os elementos verticalmente */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .imagem {
+        max-width: 100%; /* A imagem ocupa 100% da largura disponível */
+        margin-bottom: 15px;
+    }
+
+    .Descricao {
+        text-align: left; /* Alinha o texto à esquerda em telas pequenas */
+    }
+
+    
+}
+
+/* Responsividade para telas muito pequenas (mobile) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem; /* Diminui o tamanho do título em telas muito pequenas */
+    }
+
+    .Descricao {
+        font-size: 1rem; /* Diminui o tamanho da fonte do texto */
+    }
 }

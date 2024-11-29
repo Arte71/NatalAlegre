@@ -49,5 +49,6 @@
         <div *ngIf="authService.session" class="link">Bem vindo {{ authService.session.user }}</div>
         <div *ngIf="authService.session">|</div>
         <div *ngIf="authService.session" class="link" (click)="authService.session = undefined">Sair do sistema</div>
+
     </div>
 </div>
