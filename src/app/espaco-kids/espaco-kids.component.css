@@ -1,0 +1,86 @@
+#espaco-kids {
+    background-color: #f5f5f5; /* Fundo suave e neutro para não sobrecarregar os olhos */
+    padding: 50px 0; /* Adiciona espaçamento superior e inferior para dar respiro à seção */
+    font-family: 'Arial', sans-serif; /* Fonte simples e fácil de ler para todo o texto */
+    text-align: center; /* Centraliza o texto da seção */
+    color: #333; /* Cor padrão de texto escura para maior legibilidade */
+}
+
+/* Container para centralizar o conteúdo */
+#espaco-kids .container {
+    max-width: 1200px; /* Limita a largura máxima para que o conteúdo não fique muito largo em telas grandes */
+    margin: 0 auto; /* Centraliza o container na página */
+    padding: 0 20px; /* Adiciona espaçamento nas laterais para não colar o conteúdo nas bordas */
+}
+
+/* Título principal da seção */
+#espaco-kids h2 {
+    font-size: 2.5rem; /* Tamanho grande para o título se destacar */
+    color: #D32F2F; /* Cor vermelha natalina para o título, remetendo ao Natal */
+    margin-bottom: 20px; /* Espaço abaixo do título para separá-lo do conteúdo */
+}
+
+/* Parágrafo com uma introdução fofa */
+#espaco-kids p {
+    font-size: 1.2rem; /* Tamanho de fonte médio para uma boa leitura */
+    color: #555; /* Cor de texto mais suave para o parágrafo */
+    margin-bottom: 30px; /* Espaço abaixo do parágrafo para separar do formulário */
+}
+
+/* Container do formulário */
+.form-container {
+    background-color: #fff; /* Fundo branco para destacar o formulário em relação ao fundo da seção */
+    padding: 30px; /* Espaçamento interno generoso para dar espaço aos elementos do formulário */
+    border-radius: 8px; /* Bordas arredondadas para um visual mais amigável */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidade ao formulário */
+    max-width: 500px; /* Limita a largura do formulário para não ficar muito largo */
+    margin: 0 auto; /* Centraliza o formulário horizontalmente */
+}
+
+/* Subtítulo dentro do container do formulário */
+.form-container h3 {
+    font-size: 2rem; /* Tamanho grande para o subtítulo */
+    color: #388E3C; /* Cor verde natalina para o subtítulo, combinando com o tema */
+    margin-bottom: 20px; /* Espaço abaixo do subtítulo para separar do campo de formulário */
+}
+
+/* Estilos para os campos de entrada e área de texto */
+form input, form textarea {
+    width: 100%; /* Faz os campos ocuparem toda a largura disponível no formulário */
+    padding: 10px; /* Espaçamento interno nos campos para garantir que o texto não fique colado nas bordas */
+    font-size: 1.1rem; /* Tamanho de fonte adequado para facilitar a digitação */
+    border: 1px solid #ccc; /* Borda cinza clara nos campos */
+    border-radius: 5px; /* Bordas arredondadas para os campos */
+    margin-bottom: 20px; /* Espaço abaixo de cada campo para separar os elementos */
+}
+
+/* Estilo para o botão de envio */
+form button {
+    background-color: #388E3C; /* Cor verde natalina para o botão */
+    color: white; /* Cor do texto do botão em branco */
+    font-size: 1.2rem; /* Tamanho de fonte do botão */
+    padding: 10px 20px; /* Espaçamento interno no botão para deixá-lo confortável de clicar */
+    border: none; /* Remove a borda padrão do botão */
+    border-radius: 5px; /* Bordas arredondadas para o botão */
+    cursor: pointer; /* Mostra que o botão é clicável */
+    width: 100%; /* Faz o botão ocupar toda a largura do formulário */
+    transition: background-color 0.3s; /* Transição suave ao passar o mouse por cima do botão */
+}
+
+/* Efeito de hover no botão */
+form button:hover {
+    background-color: red; /* Muda o botão para um tom de vermelhoquando o mouse passa por cima */
+}
+
+/* Estilo para os campos de entrada */
+form label {
+    font-size: 1.1rem; /* Tamanho de fonte dos rótulos dos campos */
+    color: #333; /* Cor escura para garantir boa visibilidade */
+    display: block; /* Faz o rótulo ocupar toda a linha */
+    margin-bottom: 5px; /* Adiciona espaço entre o rótulo e o campo */
+}
+
+/* Placeholder para os campos de entrada */
+form input::placeholder, form textarea::placeholder {
+    color: #aaa; /* Cor mais clara para o texto de placeholder */
+}

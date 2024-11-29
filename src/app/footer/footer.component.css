@@ -1,8 +1,7 @@
 #footer {
-    padding: 15px;
+    padding: 0;
     text-align: center;
-    background: rgb(179, 19, 19);
-    background-image: linear-gradient(to right, rgb(129, 19, 19) , rgb(250, 5, 5));
+    background: #ff0000;
     color: white;
     font-size: 15px;
     line-height: 1.1;
@@ -13,7 +12,9 @@
     justify-content: center;
     bottom: 0;
     width: 100%;
-    position: fixed;
+    height: 100px;
+    flex: 1;
+    margin-top: 50px;
 }
 
 .textobaixo {

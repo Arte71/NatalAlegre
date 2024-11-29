@@ -1,19 +1,50 @@
-<h1>Seja um "Papai Noel" para alguém!</h1>
-<p>A suas doações ajudarão famíliase crianças em todo mundo a sentirem o verdadeiro espirito natalino!</p><br>
-<p>Comece a doar para a causa:</p>
-<form action="">
-    <label for="doacao" id="causa">Doação para [CAUSA]:</label>
-    <input type="text" id="doacao" name="doacao"><br><br>
-    <input type="submit" value="Submit">
-</form>
-<div>
-    <b>Selecionar causa:</b><br>
-    <input type="checkbox">
-    <img src="assets/brinquedo.png" alt="Icone Brinquedo">
-    <input type="checkbox">
-    <img src="assets/brinquedo.png" alt="Icone Brinquedo">
-    <input type="checkbox">
-    <img src="assets/brinquedo.png" alt="Icone Brinquedo">
-    <input type="checkbox">
-    <img src="assets/brinquedo.png" alt="Icone Brinquedo">
-</div>
+<section id="doacao">
+
+    <div class="container">
+
+        <h2>Como Ajudar: Faça uma Doação de Natal</h2>
+        <p>Este Natal, muitas crianças precisam de nossa ajuda. Com sua doação, podemos levar alegria e esperança a essas crianças. Confira abaixo como você pode contribuir:</p>
+
+        <!-- Como Doar -->
+        <div class="doar">
+            <h3>Como Doar</h3>
+            <p>Você pode fazer sua doação de várias maneiras. Seja dinheiro, brinquedos ou roupas, toda contribuição é bem-vinda!</p>
+            <ul>
+                <li><strong>Doação em Dinheiro:</strong> Deposite em nossa conta bancária, as informações estão abaixo.</li>
+                <li><strong>Doação de Brinquedos:</strong> Aceitamos brinquedos novos ou usados, desde que em bom estado.</li>
+                <li><strong>Doação de Roupas:</strong> Roupas novas ou em bom estado para as crianças de 0 a 12 anos.</li>
+            </ul>
+        </div>
+
+        <!-- Onde Doar -->
+        <div class="onde-doar">
+            <h3>Como Doar</h3>
+            <p>Você pode fazer a doação em nosso ponto de coleta ou pela nossa conta bancária:</p>
+            <h3>Onde Doar</h3>
+            <p>Você pode fazer a doação em nosso ponto de coleta ou pela nossa conta bancária:</p>
+            <ul>
+                <li><strong>Ponto de Coleta:</strong> Rua Solidariedade, 123 - Centro</li>
+                <li><strong>Conta Bancária:</strong> Banco X, Agência 1234, Conta Corrente 56789-0</li>
+            </ul>
+        </div>
+
+        <!-- Formulário de Contato -->
+        <div class="contato">
+            
+            <h3>Dúvidas entre em Contato</h3>
+            <p>Se tiver alguma dúvida ou quiser mais informações, entre em contato conosco preenchendo o formulário abaixo:</p>
+            <form action="processar_doacao.php" method="POST">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+</section>
