@@ -1,35 +1,34 @@
-<div id="login" ng-class="modal">
+<div id="login" [ngClass]="statusClassLogin">
     <form class="content-animate" action="" method="post">
-        <span (click)="fechar" class="close"></span>
+        <span (click)="fecharLogin()" class="close">X</span>
     
 
     <div>
         <div class="container">
-            <label for="user"><b>Usuário</b></label>
-            <input type="text" placeholder="Insira o nome de usuário" name="user" required ng-model='acessarObj.user'>
-            <label for="senha"><b>Senha</b></label>
-            <input type="password" placeholder="Insira a senha" name="senha" required ng-model='acessarObj.senha'>
-            <button type="sumbit" (click)="onLogin()">Acessar o Sistema</button>
+            <label for="user" class="inf"><b>Usuário</b></label>
+            <input type="text" placeholder="Insira o nome de usuário" name="user" required [(ngModel)]='acessarObj.user'>
+            <label for="senha" class="inf"><b>Senha</b></label>
+            <input type="password" placeholder="Insira a senha" name="senha" required [(ngModel)]='acessarObj.senha'>
+            <button type="sumbit" (click)="onLogin()" class="inf">Acessar o Sistema</button>
         </div>
         <span class="senha">Esqueceu a <a href="#"> senha?</a></span>
     </div>
   </form>
 </div>
 
-<div id="cadastro" ng-class="modal">
+<div id="cadastro" [ngClass]="statusClassCadastro">
     <form class="content-animate" action="" method="post">
-        <span (click)="fechar" class="close"></span>
+        <span (click)="fecharCadastro()" class="close">X</span>
     
 
     <div>
         <div class="container">
-            <label for="user"><b>Usuário</b></label>
-            <input type="text" placeholder="Insira o nome de usuário" name="user" required ng-model='cadastrarObj.user'>
-            <label for="senha"><b>Senha</b></label>
-            <input type="password" placeholder="Insira a senha" name="senha" required ng-model='cadastrarObj.senha'>
-            <button type="sumbit" (click)="onCadastrar()">Cadastrar-se</button>
+            <label for="user" class="inf"><b>Usuário</b></label>
+            <input type="text" placeholder="Insira o nome de usuário" name="user" required [(ngModel)]='cadastrarObj.user'>
+            <label for="senha" class="inf"><b>Senha</b></label>
+            <input type="password" placeholder="Insira a senha" name="senha" required [(ngModel)]='cadastrarObj.senha'>
+            <button type="sumbit" (click)="onCadastrar()" class="inf">Cadastrar-se</button>
         </div>
-        <span class="senha">Esqueceu a <a href="#">senha?</a></span>
     </div>
   </form>
 </div>
@@ -45,7 +44,10 @@
         <div class="link">Sobre</div>
         <div class="link">Contato</div>
         <div>|</div>
-        <div class="link" (click)="abrir">Login</div>
-        <div class="link">Cadastrar</div>
+        <div *ngIf="!authService.session" class="link" (click)="abrirLogin()">Login</div>
+        <div *ngIf="!authService.session" class="link" (click)="abrirCadastro()">Cadastrar</div>
+        <div *ngIf="authService.session" class="link">Bem vindo {{ authService.session.user }}</div>
+        <div *ngIf="authService.session">|</div>
+        <div *ngIf="authService.session" class="link" (click)="authService.session = undefined">Sair do sistema</div>
     </div>
 </div>
