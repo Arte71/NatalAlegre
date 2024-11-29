@@ -1,0 +1,96 @@
+#doacao {
+    background-color: #f2f2f2; /* Cor de fundo suave para a seção */
+    padding: 40px 0; /* Espaçamento superior e inferior */
+    font-family: Arial, sans-serif; /* Define a fonte da página */
+}
+
+/* Container para centralizar o conteúdo e definir a largura máxima */
+#doacao .container {
+    max-width: 1200px; /* Largura máxima da seção */
+    margin: 0 auto; /* Centraliza a seção na página */
+    padding: 0 20px; /* Espaçamento nas laterais */
+}
+
+/* Título principal da seção */
+#doacao h2 {
+    text-align: center; /* Alinha o título no centro */
+    font-size: 2.5rem; /* Define o tamanho da fonte do título */
+    color: #333; /* Cor escura para o título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+/* Parágrafos explicativos na seção */
+#doacao p {
+    font-size: 1.2rem; /* Tamanho da fonte */
+    color: #555; /* Cor mais clara para o texto */
+    text-align: center; /* Alinha o texto no centro */
+    margin-bottom: 30px; /* Espaço abaixo do parágrafo */
+}
+
+/* Estilo para as caixas que contêm as informações de doação */
+.doar, .onde-doar, .contato {
+    background-color: #fff; /* Fundo branco para as caixas */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 8px; /* Borda arredondada */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor das caixas */
+    margin-bottom: 30px; /* Espaço abaixo de cada caixa */
+}
+
+/* Estilo para os subtítulos dentro das caixas */
+h3 {
+    font-size: 2rem; /* Tamanho da fonte */
+    color: #333; /* Cor escura */
+    margin-bottom: 15px; /* Espaço abaixo do subtítulo */
+}
+
+/* Estilos para listas de informações */
+ul {
+    list-style: none; /* Remove os marcadores de lista padrão */
+    padding: 0; /* Remove o padding padrão da lista */
+}
+
+/* Estilo para os itens da lista */
+ul li {
+    font-size: 1.2rem; /* Tamanho da fonte */
+    margin-bottom: 10px; /* Espaço abaixo de cada item */
+    color: #555; /* Cor mais clara para o texto */
+}
+
+/* Estilos do formulário de contato */
+form {
+    display: flex; /* Usado para alinhamento flexível dos campos */
+    flex-direction: column; /* Organiza os campos do formulário em uma coluna */
+}
+
+/* Estilo para os rótulos do formulário */
+form label {
+    font-size: 1.1rem; /* Tamanho da fonte */
+    color: #333; /* Cor escura */
+    margin-bottom: 5px; /* Espaço abaixo do rótulo */
+}
+
+/* Estilo para os campos de entrada e área de texto */
+form input, form textarea {
+    padding: 10px; /* Espaçamento interno nos campos */
+    font-size: 1rem; /* Tamanho da fonte */
+    border: 1px solid #ccc; /* Borda fina e cinza */
+    border-radius: 5px; /* Bordas arredondadas */
+    margin-bottom: 15px; /* Espaço abaixo de cada campo */
+}
+
+/* Estilo para o botão de envio do formulário */
+form button {
+    background-color: red; /* Cor de fundo vermelho */
+    color: white; /* Cor do texto no botão */
+    font-size: 1.2rem; /* Tamanho da fonte */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Bordas arredondadas */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+/* Efeito de hover (passar o mouse) no botão */
+form button:hover {
+    background-color: green; /* Muda a cor de fundo para um verde */
+}
+
