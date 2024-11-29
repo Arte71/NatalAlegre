@@ -40,9 +40,9 @@
     <div id="links">
         <div><a routerLink="/" class="link">Notícias</a></div>
         <div><a routerLink="/doacao" class="link">Doações</a></div>
-        <div class="link">Lugar Kids</div>
-        <div class="link">Sobre</div>
-        <div class="link">Contato</div>
+        <div routerLink="/espaco-kids" class="link">Lugar Kids</div>
+        <div routerLink="/sobre" class="link">Sobre</div>
+        <div routerLink="/contato" class="link">Contato</div>
         <div>|</div>
         <div *ngIf="!authService.session" class="link" (click)="abrirLogin()">Login</div>
         <div *ngIf="!authService.session" class="link" (click)="abrirCadastro()">Cadastrar</div>
